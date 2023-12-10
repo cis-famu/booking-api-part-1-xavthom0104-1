@@ -1,0 +1,25 @@
+package com.booking.booking.model;
+
+import com.google.cloud.Timestamp;
+import com.google.cloud.firestore.annotation.DocumentId;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Hotels {
+    @DocumentId
+    private @Nullable String hotelID;
+    private String name;
+    private String description;
+    private long rating;
+    private String address;
+    private String contactInformation;
+    private ArrayList<String> amenities;
+    private @Nullable Timestamp createdAt;
+}
